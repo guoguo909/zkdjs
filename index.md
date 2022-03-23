@@ -10,7 +10,11 @@
       var minute = Math.floor(s % 60);  //分
       return "相差" + day + "天" + hour + "小时" + minute + "分"+ss+"秒"+mms+"毫秒";
     }
+    function x()
+    {
     var oDate1 = new Date(); // 获取当前日期
     var oDate2 = new Date("2022-6-14 8:00:00"); // 指定未来时间
     document.write(getDay(oDate1, oDate2));
+    }
+    var time1 = window.setInterval(x, 1);
   </script>
