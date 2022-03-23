@@ -1,14 +1,20 @@
 <script type="text/javascript">
     function getDay(date1, date2) {
-      var ms = Math.abs(date2 - date1);
-      // 两个日期相减得到毫秒数  1s=1000ms
-      var s = ms / 1000; // 毫秒转为秒
-      var mms=Math.floor(ms);
-      var ss=Math.floor(s);
-      var day = Math.floor(s / 3600 / 24); //天
-      var hour = Math.floor(s / 3600 % 24); //小时
-      var minute = Math.floor(s % 60);  //分
-      return "相差" + day + "天" + hour + "小时" + minute + "分"+ss+"秒"+mms+"毫秒";
+        var date3=date2.getTime()-date1.getTime(); //时间差的毫秒数 
+        //计算出相差天数 
+        var days=Math.floor(date3/(24*3600*1000)) ;
+        //计算出小时数 
+        var leave1=date3%(24*3600*1000) ; //计算天数后剩余的毫秒数 
+        var hours=Math.floor(leave1/(3600*1000)) ;
+        //计算相差分钟数 
+        var leave2=leave1%(3600*1000);    //计算小时数后剩余的毫秒数 
+        var minutes=Math.floor(leave2/(60*1000)) ;
+        //计算相差秒数 
+      var leave3=leave2%(60*1000);   //计算分钟数后剩余的毫秒数 
+      var seconds=Math.round(leave3/1000);
+      var leave4=leave3%(1000);   //计算分钟数后剩余的毫秒数 
+      var ms=Math.round(leave4/1000);
+      return "相差" + days + "天" + hours + "小时" + minutes + "分"+seconds+"秒"+ms+"毫秒";
     }
     function x()
     {
