@@ -14,7 +14,8 @@
     {
     var oDate1 = new Date(); // 获取当前日期
     var oDate2 = new Date("2022-6-14 8:00:00"); // 指定未来时间
-    document.write(getDay(oDate1, oDate2));
+    document.getElementById("11").innerHTML=getDay(oDate1, oDate2);
     }
     var time1 = window.setInterval(x, 1);
   </script>
+  <p id="11"></p>
