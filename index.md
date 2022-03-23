@@ -1,4 +1,4 @@
-##中考倒计时
+## 中考倒计时
 <script type="text/javascript">
     function getDay(date1, date2) {
         var date3=date2.getTime()-date1.getTime(); //时间差的毫秒数 
