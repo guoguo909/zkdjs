@@ -13,7 +13,7 @@
       var leave3=leave2%(60*1000);   //计算分钟数后剩余的毫秒数 
       var seconds=Math.round(leave3/1000);
       var leave4=leave3%(1000);   //计算分钟数后剩余的毫秒数 
-      var ms=Math.round(leave4/1000);
+      var ms=Math.round(leave4);
       return "相差" + days + "天" + hours + "小时" + minutes + "分"+seconds+"秒"+ms+"毫秒";
     }
     function x()
