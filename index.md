@@ -6,7 +6,7 @@
       var day = Math.floor(s / 3600 / 24); //天
       var hour = Math.floor(s / 3600 % 24); //小时
       var minute = Math.floor(s % 60);  //分
-      return "相差" + day + "天" + hour + "小时" + minute + "分"+s+"秒"+1s+"毫秒";
+      return "相差" + day + "天" + hour + "小时" + minute + "分"+s+"秒"+ms+"毫秒";
     }
     var oDate1 = new Date(); // 获取当前日期
     var oDate2 = new Date("2022-6-14 8:00:00"); // 指定未来时间
